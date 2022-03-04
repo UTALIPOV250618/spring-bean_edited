@@ -5,10 +5,20 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class App {
     public static void main(String[] args) {
-        ApplicationContext applicationContext =
+        ApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
-        HelloWorld bean =
-                (HelloWorld) applicationContext.getBean("helloworld");
-        System.out.println(bean.getMessage());
+        HelloWorld helloWorld =
+                (HelloWorld) context.getBean("helloworld");
+        Cat cat = (Cat) context.getBean("cat");
+        Cat cat1 = (Cat) context.getBean("cat");
+
+        System.out.println(helloWorld);
+        System.out.println(cat);
+        System.out.println(cat1);
+        boolean compare = cat==cat1;
+        System.out.println(compare);
+
+
+
     }
 }

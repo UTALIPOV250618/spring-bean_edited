@@ -12,4 +12,10 @@ public class HelloWorld {
         this.message = message;
     }
 
+//    @Override
+//    public String toString() {
+//        return "HelloWorld{" +
+//                "message='" + message + '\'' +
+//                '}';
+//    }
 }
